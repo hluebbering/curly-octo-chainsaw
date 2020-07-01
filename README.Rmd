@@ -1,6 +1,8 @@
 ---
 title: "Caliban Tutorial"
 output: github_document
+bibliography: references.bib
+nocite: '@*'
 ---
 
 ```{r setup, include=FALSE}
@@ -140,5 +142,4 @@ caliban cloud --nogpu mnist.py -- --learning_rate 0.01
   
     - submitting the job to AI Platform
 
-
-6. Caliban Shell:
+-------------------------------------------------

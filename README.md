@@ -132,4 +132,16 @@ caliban cloud --nogpu mnist.py -- --learning_rate 0.01
     
     - submitting the job to AI Platform
 
-6.  Caliban Shell:
+-----
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-caliban2020github">
+
+Ritchie, Sam, Ambrose Slone, and Vinay Ramasesh. 2020. *Caliban:
+Docker-Based Job Manager for Reproducible Workflows* (version 0.2.5).
+<http://github.com/google/caliban>.
+
+</div>
+
+</div>
