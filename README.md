@@ -27,7 +27,7 @@ Caliban Tutorial
 
 ### 1\. In terminal:
 
-``` r
+```{bash}
 pip install caliban
 ```
 
@@ -41,7 +41,7 @@ pip install caliban
 
 ### 4\. Install google cloud SDK in terminal:
 
-``` r
+``` {bash}
 ./google-cloud-sdk/install.sh
 
 gcloud init
@@ -53,7 +53,7 @@ gcloud init
 
 <!-- end list -->
 
-``` r
+``` {bash}
 nano.zshrc
 ```
 
@@ -61,7 +61,7 @@ nano.zshrc
 
 <!-- end list -->
 
-``` r
+``` {bash}
 ./google-cloud-sdk/install.sh
 
 export PROJECT_ID=<your-project-id>
@@ -73,18 +73,17 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/service_key.json
 
 ### 1\. Setup:
 
-``` r
+``` {bash}
 mkdir demo && cd demo
 
-curl --output mnist.py https://raw.githubusercontent.com/google/caliban
-    master/tutorials/basic/mnist.py
+curl --output mnist.py https://raw.githubusercontent.com/google/caliban/master/tutorials/basic/mnist.py
 
 echo "tensorflow-cpu" > requirements.txt
 ```
 
 ### 2\. Train a basic neural network
 
-``` r
+``` {bash}
 caliban run --nogpu mnist.py
 ```
 
@@ -92,7 +91,7 @@ caliban run --nogpu mnist.py
 
 ### 3\. Improve Model:
 
-``` r
+``` {bash}
 caliban run --nogpu mnist.py -- --learning_rate 0.01
 ```
 
@@ -104,7 +103,7 @@ caliban run --nogpu mnist.py -- --learning_rate 0.01
 
 <!-- end list -->
 
-``` r
+``` {bash}
 echo '{"learning_rate": [0.01, 0.001, 0.0001]}' > experiment.json`
 ```
 
@@ -112,13 +111,13 @@ echo '{"learning_rate": [0.01, 0.001, 0.0001]}' > experiment.json`
 
 <!-- end list -->
 
-``` r
+``` {bash}
 caliban run --experiment_config experiment.json --nogpu mnist.py
 ```
 
 ### 5\. Submitting to Cloud AI Platform:
 
-``` r
+``` {bash}
 gcloud config set project prickly-cactus
 
 caliban cloud --nogpu mnist.py -- --learning_rate 0.01
