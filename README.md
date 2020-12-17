@@ -1,4 +1,4 @@
-Caliban Tutorial
+Caliban Intro Tutorial
 ================
 
 ## What is Caliban?
